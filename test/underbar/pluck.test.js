@@ -2,6 +2,8 @@ const _ = require('../../underbar');
 
 describe('pluck()', () => {
   it('returns an array of just ages, given an array of people objects', () => {
+    // Your code goes here
+    /* START SOLUTION */
     const people = [
       { name: 'Harriet', age: 12},
       { name: 'Lazarus', age: 999},
@@ -9,6 +11,7 @@ describe('pluck()', () => {
     ];
     const result = _.pluck(people, 'age');
     expect(result).toEqual([12, 999, 14]);
+    /* END SOLUTION */
   });
 
 });

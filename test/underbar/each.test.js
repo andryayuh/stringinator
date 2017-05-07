@@ -2,6 +2,8 @@ const _ = require('../../underbar');
 
 describe('each()', () => {
   it('iterates every element of an array, passing that element, its corresponding index, and the entire array to the callback', () => {
+    // Your code goes here
+    /* START SOLUTION */
     const arr = ['a', 'b', 'c'];
     let count = 0;
     _.each(arr, function(element, index, array) {
@@ -9,9 +11,12 @@ describe('each()', () => {
       count += 1;
     });
     expect(count).toBe(3);
+    /* END SOLUTION */
   });
 
   it('iterates every element of an array-like object, passing that element, its corresponding index, and the entire array to the callback', () => {
+    // Your code goes here
+    /* START SOLUTION */
     const arrayLikeObj = {
       length: 3,
       1: 'a',
@@ -24,9 +29,12 @@ describe('each()', () => {
       count += 1;
     });
     expect(count).toBe(3);
+    /* END SOLUTION */
   });
 
   it('iterates every property of an object, passing the value, the corresponding key, and the entire object to the callback', () => {
+    // Your code goes here
+    /* START SOLUTION */
     const obj = {
       name: 'Calvin',
       age: 6,
@@ -38,6 +46,7 @@ describe('each()', () => {
       count += 1;
     });
     expect(count).toBe(3);
+    /* END SOLUTION */
   });
 });
 

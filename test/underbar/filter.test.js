@@ -2,11 +2,16 @@ const _ = require('../../underbar');
 
 describe('filter()', () => {
   it('filters an array to odd numbers', () => {
+    // Your code goes here
+    /* START SOLUTION */
     const nums = [2, 4, 5, 6, 7, 8, 10, 11];
     expect(_.filter(nums, num => num % 2 === 1)).toEqual([5, 7, 11]);
+    /* END SOLUTION */
   });
 
   it('filters an object to only numeric values', () => {
+    // Your code goes here
+    /* START SOLUTION */
     const characterAttributes = {
       name: 'Thokul Mongothsbeard',
       honorific: 'Lord Thokul Mongothsbeard the Arcane',
@@ -22,5 +27,6 @@ describe('filter()', () => {
 
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
+    /* END SOLUTION */
   });
 });
