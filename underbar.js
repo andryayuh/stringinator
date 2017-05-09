@@ -153,10 +153,10 @@ const filter = function(obj, callback=identity) {
 };
 
 // Return object without the elements / object valuesthat were rejected by the callback.
-const reject = function(arr, callback=identity) {
+const reject = function(obj, callback=identity) {
   // Your code goes here
   /* START SOLUTION */
-  return filter(arr, item => !callback(item));
+  return filter(obj, item => !callback(item));
   /* END SOLUTION */
 };
 
