@@ -23,15 +23,18 @@ const last = function(array, n = 1) {
 };
 
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
-const indexOf = function(array, target, fromIndex=0) {
+const indexOf = function(arr, target, fromIndex=0) {
+  // Hint: it's not the most efficient solution but you can and should use each() for this learning exercise.
+  // The code reuse is nice and it avoids off-by-one errors from using for-loops.
   // Your code goes here
   /* START SOLUTION */
-  for (let index = fromIndex; index <= array.length; index++) {
-    if (array[index] === target) {
-      return index;
+  let result = -1;
+  each(arr, function(item, index) {
+    if (index >= fromIndex && result === -1 && item === target) {
+      result = index;
     }
-  }
-  return -1;
+  });
+  return result;
   /* END SOLUTION */
 };
 
